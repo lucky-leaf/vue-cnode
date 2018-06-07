@@ -11,7 +11,7 @@ module.exports = {
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].js',
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/static/js/'
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -59,5 +59,5 @@ module.exports = {
       template: './src/template.html'
     }),
     new VueLoaderPlugin()
-  ],
+  ]
 }
