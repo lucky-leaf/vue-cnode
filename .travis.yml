@@ -1,5 +1,5 @@
 language: node_js
 node_js:
-  - lts/8
+  - lts/8.11.2
 script:
   - npm run build
