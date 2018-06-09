@@ -29,17 +29,20 @@ module.exports = {
         options: {
           fix: true
         }
-      },{
+      },
+      {
         test: /\.js?$/,
         use: ['babel-loader'],
         exclude: (file) => (
           /node_modules/.test(file) &&
           !/\.vue\.js/.test(file)
         )
-      }, {
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader'
-      }, {
+      },
+      {
         test: /\.css$/,
         use: [
           'vue-style-loader',
@@ -50,6 +53,17 @@ module.exports = {
             }
           },
           'postcss-loader'
+        ]
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'static/images/[name].[ext]'
+            }
+          }
         ]
       }
     ]
