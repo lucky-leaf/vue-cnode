@@ -48,7 +48,7 @@ export default {
       return this.$store.state.lists[this.tab]
     }
   },
-  mounted () {
+  created () {
     this.GET_TOPICS({
       page: 1,
       tab: this.tab,

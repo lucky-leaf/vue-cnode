@@ -30,7 +30,11 @@
             </div>
           </div>
           <div class="level-item">
-            <p>{{ item.title }}</p>
+            <router-link
+              :to="to"
+              class="link">
+              {{ item.title }}
+            </router-link>
           </div>
         </div>
       </div>
@@ -65,11 +69,17 @@ export default {
   computed: {
     type () {
       return this.types[this.item.tab]
+    },
+    to () {
+      return '/topic/' + this.item.id
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
+  .link {
+    color: red;
 
+  }
 </style>

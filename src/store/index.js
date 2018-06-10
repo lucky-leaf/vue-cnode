@@ -9,8 +9,7 @@ export default new Vuex.Store({
   state: {
     tab: 'all',
     limit: 15,
-    page: 1,
-    mdrender: true,
+    topic: {},
     lists: {
       all: [],
       good: [],
