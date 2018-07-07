@@ -1,6 +1,6 @@
 <template>
   <div class="tile is-ancestor is-marginless">
-    <div class="tile is-parent is-8">
+    <div class="tile is-parent">
       <div class="tile is-child box is-radiusless is-paddingless">
         <div class="tabs is-marginless">
           <ul>
@@ -15,11 +15,6 @@
         <list-view :list="list"/>
       </div>
     </div>
-    <div class="tile is-parent">
-      <div class="tile is-child">
-        <user-info />
-      </div>
-    </div>
   </div>
 </template>
 
@@ -29,13 +24,11 @@ import {
   mapActions
 } from 'vuex'
 import ListView from './components/ListView'
-import UserInfo from './components/UserInfo'
 
 export default {
   name: 'HomeContent',
   components: {
-    ListView,
-    UserInfo
+    ListView
   },
   computed: {
     ...mapState([
