@@ -43,16 +43,17 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           'vue-style-loader',
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              importLoaders: 2
             }
           },
-          'postcss-loader'
+          'postcss-loader',
+          'sass-loader'
         ]
       },
       {

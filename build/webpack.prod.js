@@ -32,16 +32,17 @@ module.exports = merge.smart(common, {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              importLoaders: 2
             }
           },
-          'postcss-loader'
+          'postcss-loader',
+          'sass-loader'
         ]
       }
     ]
