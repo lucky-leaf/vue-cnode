@@ -1,9 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const common = require('./webpack.common.js')
+const baseConfig = require('./webpack.base.js')
 
-module.exports = merge(common, {
+module.exports = merge(baseConfig, {
   mode: 'development',
   output: {
     filename: 'static/js/[name].[hash:8].js',
