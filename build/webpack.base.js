@@ -8,8 +8,7 @@ module.exports = {
     app: './src/main.js'
   },
   output: {
-    filename: 'static/js/[name].[chunkhash:8].js',
-    chunkFilename: 'static/js/[name].js',
+    filename: 'static/js/[name].[contenthash:8].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
@@ -62,10 +61,17 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'static/images/[name].[ext]'
+              name: 'static/image/[name].[ext]'
             }
           }
         ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'static/font/[name].[ext]'
+        }
       }
     ]
   },
