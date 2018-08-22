@@ -18,13 +18,9 @@ module.exports = merge.smart(baseConfig, {
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
-        'vue.family': {
-          test: /[\\/]node_modules[\\/]vue/,
-          name: 'vue.family'
-        },
-        axios: {
-          test: /[\\/]node_modules[\\/]axios/,
-          name: 'axios'
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors'
         }
       }
     }
