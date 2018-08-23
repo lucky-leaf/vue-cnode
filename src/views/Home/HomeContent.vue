@@ -1,21 +1,26 @@
 <template>
-  <div class="tile is-ancestor is-marginless">
-    <div class="tile is-parent">
-      <div class="tile is-child box is-radiusless is-paddingless">
-        <div class="tabs is-marginless">
-          <ul>
-            <li><a>全部</a></li>
-            <li><a>精华</a></li>
-            <li><a>分享</a></li>
-            <li><a>问答</a></li>
-            <li><a>招聘</a></li>
-            <li><a>测试</a></li>
-          </ul>
-        </div>
-        <list-view :list="list"/>
-      </div>
-    </div>
-  </div>
+  <el-tabs
+    v-model="activeName"
+    @tab-click="handleClick">
+    <el-tab-pane
+      label="全部"
+      name="first">全部</el-tab-pane>
+    <el-tab-pane
+      label="精华"
+      name="second">精华</el-tab-pane>
+    <el-tab-pane
+      label="分享"
+      name="third">分享</el-tab-pane>
+    <el-tab-pane
+      label="问答"
+      name="forth">问答</el-tab-pane>
+    <el-tab-pane
+      label="招聘"
+      name="fifth">招聘</el-tab-pane>
+    <el-tab-pane
+      label="测试"
+      name="sixth">测试</el-tab-pane>
+  </el-tabs>
 </template>
 
 <script>
@@ -29,6 +34,11 @@ export default {
   name: 'HomeContent',
   components: {
     ListView
+  },
+  data () {
+    return {
+      activeName: 'second'
+    }
   },
   computed: {
     ...mapState([
