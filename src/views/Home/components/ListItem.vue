@@ -1,45 +1,5 @@
 <template>
-  <article
-    class="message is-dark is-radiusless">
-    <div class="message-body is-radiusless">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <figure class="image is-32x32">
-              <img
-                :src="item.author.avatar_url"
-                alt="avatar">
-            </figure>
-          </div>
-          <div class="level-item">
-            <strong>{{ item.reply_count }}</strong>/{{ item.visit_count }}
-          </div>
-          <div class="level-item">
-            <div class="tags">
-              <span
-                v-if="item.top"
-                class="tag is-info">
-                置顶
-              </span>
-              <span
-                v-if="item.good"
-                class="tag is-success">精华</span>
-              <span class="tag">
-                {{ type }}
-              </span>
-            </div>
-          </div>
-          <div class="level-item">
-            <router-link
-              :to="to"
-              class="link">
-              {{ item.title }}
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
+  <div>List Item</div>
 </template>
 
 <script>
