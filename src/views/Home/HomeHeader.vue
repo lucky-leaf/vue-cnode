@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar">
-      <span class="email">Email: shunkie@qq.com</span>
+      <span class="logo">Logo</span>
       <ul class="navbar-menu">
         <li class="navbar-item"><el-button type="text">主页</el-button></li>
         <li class="navbar-item"><el-button type="text">未读消息</el-button></li>
