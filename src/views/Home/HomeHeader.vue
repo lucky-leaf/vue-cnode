@@ -1,14 +1,18 @@
 <template>
-  <header>
-    <nav class="navbar">
-      <span class="logo">Logo</span>
-      <ul class="navbar-menu">
-        <li class="navbar-item"><el-button type="text">主页</el-button></li>
-        <li class="navbar-item"><el-button type="text">未读消息</el-button></li>
-        <li class="navbar-item"><el-button type="text">设置</el-button></li>
-        <li class="navbar-item"><el-button type="text">关于</el-button></li>
-        <li class="navbar-item"><el-button type="text">登录</el-button></li>
-      </ul>
+  <header class="nav-header">
+    <nav class="nav-content">
+      <a
+        href="#"
+        class="nav-brand">
+        <img
+          class="brand"
+          src="../../assets/images/cnodejs.svg"
+          alt="brand">
+      </a>
+
+      <el-button
+        type="text"
+        icon="el-icon-setting">登录</el-button>
     </nav>
   </header>
 </template>
@@ -24,4 +28,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .nav-header {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 0 20px;
+
+    .nav-brand {
+      display: block;
+      width: 120px;
+      height: 34px;
+      margin-right: auto;
+    }
+  }
 </style>
