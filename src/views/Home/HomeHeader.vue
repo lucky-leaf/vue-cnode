@@ -12,7 +12,30 @@
 
       <el-button
         type="text"
-        icon="el-icon-setting">登录</el-button>
+        icon="el-icon-menu">首页</el-button>
+
+      <el-button
+        type="text"
+        icon="el-icon-document">关于</el-button>
+
+      <el-button
+        type="text"
+        icon="el-icon-setting"
+        @click="dialogVisible = true">登录</el-button>
+
+      <el-dialog
+        :visible="dialogVisible"
+        :before-close="handleClose"
+        title="登录"
+        width="30%">
+        <span>登录消息</span>
+        <span slot="footer">
+          <el-button @click="dialogVisible = false">取消</el-button>
+          <el-button
+            type="primary"
+            @click="dialogVisible = false">确认</el-button>
+        </span>
+      </el-dialog>
     </nav>
   </header>
 </template>
@@ -22,6 +45,12 @@ export default {
   name: 'HomeHeader',
   data () {
     return {
+      dialogVisible: false
+    }
+  },
+  methods: {
+    handleClose (done) {
+      done()
     }
   }
 }
@@ -29,15 +58,15 @@ export default {
 
 <style lang="scss" scoped>
   .nav-header {
-    width: 1024px;
-    margin: 0 auto;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.25);
   }
 
   .nav-content {
     display: flex;
     align-items: center;
+    width: 1024px;
     height: 60px;
-    margin: 0 20px;
+    margin: 0 auto;
 
     .nav-brand {
       display: block;
