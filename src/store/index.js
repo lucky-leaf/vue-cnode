@@ -7,11 +7,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    accessToken: '',
     tab: 'all',
     limit: 15,
     topic: {},
     lists: {
-      all: [],
+      all: [],  
       good: [],
       share: [],
       ask: [],
