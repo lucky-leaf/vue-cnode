@@ -1,5 +1,5 @@
 import {
-  getTopics, getTopicById
+  getTopics, getTopicById, checkAccessToken
 } from '../api'
 
 export default {
@@ -15,6 +15,7 @@ export default {
       data: data.data
     })
   },
+
   async GET_TOPIC ({ state, commit }, { id, mdrender, accesstoken }) {
     const { data } = await getTopicById({
       id, mdrender, accesstoken
@@ -22,5 +23,14 @@ export default {
     commit('SET_TOPIC', {
       data: data.data
     })
+  },
+
+  async checkAccessToken ({ state, commit }, accesstoken) {
+    const response = await checkAccessToken(accesstoken)
+    if (response.success) {
+      commit('SET_ACCESSTOKEN', { accesstoken })
+    } else {
+      commit('CHECK_FAILURE')
+    }
   }
 }
