@@ -12,7 +12,7 @@ export default new Vuex.Store({
     limit: 15,
     topic: {},
     lists: {
-      all: [],  
+      all: [],
       good: [],
       share: [],
       ask: [],

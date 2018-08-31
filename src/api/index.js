@@ -25,4 +25,13 @@ const getTopicById = async function ({ id, mdrender, accesstoken }) {
   }
 }
 
-export { getTopics, getTopicById }
+const checkAccessToken = async (accesstoken) => {
+  try {
+    const response = await axios.post(API_PREFIX + `/accesstoken`, { accesstoken })
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export { getTopics, getTopicById, checkAccessToken }
