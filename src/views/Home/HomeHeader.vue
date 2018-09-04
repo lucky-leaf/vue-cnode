@@ -46,6 +46,11 @@
 </template>
 
 <script>
+import {
+  mapState,
+  mapActions
+} from 'vuex'
+
 export default {
   name: 'HomeHeader',
   data () {
@@ -56,7 +61,8 @@ export default {
       },
       formLabelWidth: '120px'
     }
-  }
+  },
+  computed: mapState(['accessToken'])
 }
 </script>
 
