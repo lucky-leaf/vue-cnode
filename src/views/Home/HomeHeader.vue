@@ -38,7 +38,7 @@
           <el-button @click="dialogVisible = false">取消</el-button>
           <el-button
             type="primary"
-            @click="dialogVisible = false">确认</el-button>
+            @click="handleClick">确认</el-button>
         </span>
       </el-dialog>
     </nav>
@@ -62,7 +62,15 @@ export default {
       formLabelWidth: '120px'
     }
   },
-  computed: mapState(['accessToken'])
+  computed: mapState(['accessToken']),
+  methods: {
+    ...mapActions(['checkAccessToken']),
+    handleClick () {
+      if (this.form.token) {
+        this.checkAccessToken(this.form.data)
+      }
+    }
+  }
 }
 </script>
 
