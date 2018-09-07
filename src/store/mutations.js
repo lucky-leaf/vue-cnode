@@ -7,5 +7,8 @@ export default {
   },
   SET_TOPIC (state, { data }) {
     state.topic = data
+  },
+  SET_ACCESSTOKEN (state, { accessToken }) {
+    state.accessToken = accessToken
   }
 }
