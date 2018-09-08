@@ -10,5 +10,8 @@ export default {
   },
   SET_ACCESSTOKEN (state, { accessToken }) {
     state.accessToken = accessToken
+  },
+  CHECK_FAILURE (state) {
+    console.log('error access token')
   }
 }
