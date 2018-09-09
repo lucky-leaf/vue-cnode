@@ -1,6 +1,7 @@
 <template>
   <el-tabs
     v-model="activeName"
+    type="border-card"
     @tab-click="handleClick">
     <el-tab-pane
       label="全部"
