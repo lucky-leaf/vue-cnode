@@ -77,6 +77,7 @@ export default {
 
 <style lang="scss" scoped>
   .nav-header {
+    background-color: #fff;
     box-shadow: 0 1px rgba(0, 0, 0, 0.25);
   }
 
