@@ -26,10 +26,11 @@
       <!-- visible如果不用sync修饰符，则需要监听close函数 -->
       <el-dialog
         :visible.sync="dialogVisible"
-        title="登录">
+        title="登录"
+        width="30%">
         <el-form>
           <el-form-item
-            label="AccessToken"
+            label="访问令牌"
             label-width="formLabelWidth">
             <el-input v-model="form.token"/>
           </el-form-item>
