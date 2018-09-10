@@ -63,7 +63,10 @@ export default {
   methods: {
     ...mapActions([
       'GET_TOPICS'
-    ])
+    ]),
+    handleClick (tab, event) {
+      console.log(tab, event)
+    }
   }
 }
 </script>
