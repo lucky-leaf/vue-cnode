@@ -37,9 +37,6 @@ export default {
 }
 </script>
 
-<style scoped>
-  .link {
-    color: red;
+<style lang="scss" scoped>
 
-  }
 </style>
