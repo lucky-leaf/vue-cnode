@@ -77,7 +77,12 @@ export default {
       'GET_TOPICS'
     ]),
     handleClick (tab, event) {
-      console.log(tab, event)
+      this.GET_TOPICS({
+        page: 1,
+        tab: tab.name,
+        limit: this.limit,
+        mdrender: this.mdrender
+      })
     }
   }
 }
