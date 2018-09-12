@@ -5,22 +5,22 @@
     @tab-click="handleClick">
     <el-tab-pane
       label="全部"
-      name="first">全部</el-tab-pane>
+      name="all">全部</el-tab-pane>
     <el-tab-pane
       label="精华"
-      name="second">精华</el-tab-pane>
+      name="good">精华</el-tab-pane>
     <el-tab-pane
       label="分享"
-      name="third">分享</el-tab-pane>
+      name="share">分享</el-tab-pane>
     <el-tab-pane
       label="问答"
-      name="forth">问答</el-tab-pane>
+      name="ask">问答</el-tab-pane>
     <el-tab-pane
       label="招聘"
-      name="fifth">招聘</el-tab-pane>
+      name="job">招聘</el-tab-pane>
     <el-tab-pane
       label="测试"
-      name="sixth">测试</el-tab-pane>
+      name="test">测试</el-tab-pane>
   </el-tabs>
 </template>
 
