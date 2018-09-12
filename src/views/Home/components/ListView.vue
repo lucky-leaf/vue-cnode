@@ -11,14 +11,6 @@ export default {
   name: 'ListView',
   components: {
     ListItem
-  },
-  props: {
-    list: {
-      type: Array,
-      default: () => {
-        return []
-      }
-    }
   }
 }
 </script>
