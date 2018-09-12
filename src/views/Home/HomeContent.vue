@@ -59,10 +59,7 @@ export default {
       'limit',
       'page',
       'mdrender'
-    ]),
-    list () {
-      return this.$store.state.lists[this.tab]
-    }
+    ])
   },
   created () {
     this.GET_TOPICS({

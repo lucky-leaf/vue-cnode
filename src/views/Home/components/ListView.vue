@@ -1,6 +1,9 @@
 <template>
   <div>
-    <list-item/>
+    <list-item
+      v-for="item in list"
+      :key="item.id"
+      :item="item"/>
   </div>
 </template>
 
@@ -11,6 +14,11 @@ export default {
   name: 'ListView',
   components: {
     ListItem
+  },
+  computed: {
+    list () {
+      return this.$store.state.lists[this.tab]
+    }
   }
 }
 </script>
