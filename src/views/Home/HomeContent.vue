@@ -5,22 +5,34 @@
     @tab-click="handleClick">
     <el-tab-pane
       label="全部"
-      name="all">全部</el-tab-pane>
+      name="all">
+      <list-view/>
+    </el-tab-pane>
     <el-tab-pane
       label="精华"
-      name="good">精华</el-tab-pane>
+      name="good">
+      <list-view/>
+    </el-tab-pane>
     <el-tab-pane
       label="分享"
-      name="share">分享</el-tab-pane>
+      name="share">
+      <list-view/>
+    </el-tab-pane>
     <el-tab-pane
       label="问答"
-      name="ask">问答</el-tab-pane>
+      name="ask">
+      <list-view/>
+    </el-tab-pane>
     <el-tab-pane
       label="招聘"
-      name="job">招聘</el-tab-pane>
+      name="job">
+      <list-view/>
+    </el-tab-pane>
     <el-tab-pane
       label="测试"
-      name="test">测试</el-tab-pane>
+      name="test">
+      <list-view/>
+    </el-tab-pane>
   </el-tabs>
 </template>
 
@@ -38,7 +50,7 @@ export default {
   },
   data () {
     return {
-      activeName: 'second'
+      activeName: 'all'
     }
   },
   computed: {

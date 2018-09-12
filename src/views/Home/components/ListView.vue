@@ -1,9 +1,6 @@
 <template>
   <div>
-    <list-item
-      v-for="item in list"
-      :key="item.id"
-      :item="item"/>
+    <list-item/>
   </div>
 </template>
 
