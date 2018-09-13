@@ -10,7 +10,13 @@
 
 <script>
 export default {
-  name: 'ListItem'
+  name: 'ListItem',
+  props: {
+    item: {
+      type: Object,
+      default: () => {}
+    }
+  }
 }
 </script>
 
