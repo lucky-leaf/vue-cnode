@@ -1,10 +1,13 @@
 <template>
   <div>
-    <a href="#"><img
-      src=""
-      alt=""></a>
-    <el-tag>问答</el-tag>
-    <span>content</span>
+    <a href="#">
+      <img
+        class="avatar"
+        :src="item.author.avatar_url"
+        alt="avatar">
+    </a>
+    <el-tag>{{ item.tab }}</el-tag>
+    <span :title="item.title">{{ item.title }}</span>
   </div>
 </template>
 
