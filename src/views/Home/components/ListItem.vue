@@ -2,8 +2,8 @@
   <div class="item">
     <a href="#">
       <img
-        class="avatar"
         :src="item.author.avatar_url"
+        class="avatar"
         alt="avatar">
     </a>
     <el-tag>{{ item.tab }}</el-tag>
