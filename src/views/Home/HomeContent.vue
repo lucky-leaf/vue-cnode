@@ -30,7 +30,7 @@
     </el-tab-pane>
     <el-tab-pane
       label="测试"
-      name="test">
+      name="dev">
       <list-view/>
     </el-tab-pane>
   </el-tabs>
