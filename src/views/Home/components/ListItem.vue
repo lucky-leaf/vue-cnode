@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="item">
     <a href="#">
       <img
         class="avatar"
@@ -24,5 +24,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .item {
+    .avatar {
+      width: 30px;
+      height: 30px;
+    }
+  }
 </style>
