@@ -80,7 +80,7 @@ export default {
 
     .topic-title {
       margin-left: 10px;
-      color: #303133;
+      color: inherit;
       text-decoration: none;
 
       &:hover {
