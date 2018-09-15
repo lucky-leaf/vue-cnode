@@ -6,7 +6,9 @@
         class="avatar"
         alt="avatar">
     </a>
-    <el-tag>{{ item.tab }}</el-tag>
+    <el-tag
+      size="small"
+      type="success">{{ item.tab }}</el-tag>
     <span :title="item.title">{{ item.title }}</span>
   </div>
 </template>
@@ -25,6 +27,9 @@ export default {
 
 <style lang="scss" scoped>
   .item {
+    display: flex;
+    align-items: center;
+
     .avatar {
       width: 30px;
       height: 30px;
