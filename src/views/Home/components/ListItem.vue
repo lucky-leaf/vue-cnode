@@ -7,6 +7,15 @@
         alt="avatar">
     </a>
     <el-tag
+      v-if="item.top"
+      size="small"
+      type="danger">置顶</el-tag>
+    <el-tag
+      v-if="item.good"
+      size="small"
+      type="warning">精华</el-tag>
+    <el-tag
+      v-if="item.tab"
       size="small"
       type="success">{{ tab }}</el-tag>
     <span :title="item.title">{{ item.title }}</span>
