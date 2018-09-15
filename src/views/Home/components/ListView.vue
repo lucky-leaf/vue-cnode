@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="list">
     <list-item
       v-for="item in list"
       :key="item.id"
@@ -26,6 +26,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .list {
+    height: 2168px;
+  }
 </style>
