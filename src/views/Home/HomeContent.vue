@@ -3,35 +3,47 @@
     v-model="activeName"
     type="border-card"
     @tab-click="handleClick">
+
     <el-tab-pane
       label="全部"
       name="all">
-      <list-view/>
+      <list-view />
+      <the-pagination />
     </el-tab-pane>
+
     <el-tab-pane
       label="精华"
       name="good">
-      <list-view/>
+      <list-view />
+      <the-pagination />
     </el-tab-pane>
+
     <el-tab-pane
       label="分享"
       name="share">
-      <list-view/>
+      <list-view />
+      <the-pagination />
     </el-tab-pane>
+
     <el-tab-pane
       label="问答"
       name="ask">
-      <list-view/>
+      <list-view />
+      <the-pagination />
     </el-tab-pane>
+
     <el-tab-pane
       label="招聘"
       name="job">
-      <list-view/>
+      <list-view />
+      <the-pagination />
     </el-tab-pane>
+
     <el-tab-pane
       label="测试"
       name="dev">
-      <list-view/>
+      <list-view />
+      <the-pagination />
     </el-tab-pane>
   </el-tabs>
 </template>
@@ -42,11 +54,13 @@ import {
   mapActions
 } from 'vuex'
 import ListView from './components/ListView'
+import ThePagination from './components/ThePagination'
 
 export default {
   name: 'HomeContent',
   components: {
-    ListView
+    ListView,
+    ThePagination
   },
   data () {
     return {
