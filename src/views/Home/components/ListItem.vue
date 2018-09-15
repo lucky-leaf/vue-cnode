@@ -8,7 +8,7 @@
     </a>
     <el-tag
       size="small"
-      type="success">{{ item.tab }}</el-tag>
+      type="success">{{ tab }}</el-tag>
     <span :title="item.title">{{ item.title }}</span>
   </div>
 </template>
@@ -20,6 +20,21 @@ export default {
     item: {
       type: Object,
       default: () => {}
+    }
+  },
+  data () {
+    return {
+      types: {
+        'share': '分享',
+        'ask': '问答',
+        'dev': '测试',
+        'job': '招聘'
+      }
+    }
+  },
+  computed: {
+    tab () {
+      return this.types[this.item.tab]
     }
   }
 }
