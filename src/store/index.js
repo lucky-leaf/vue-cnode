@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     accessToken: '',
     tab: 'all',
-    limit: 15,
+    limit: 40,
     topic: {},
     lists: {
       all: [],
