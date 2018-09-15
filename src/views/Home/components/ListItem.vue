@@ -21,9 +21,10 @@
       :hit="true"
       size="small"
       type="success">{{ tab }}</el-tag>
-    <span
+    <router-link
+      :to="to"
       :title="item.title"
-      class="topic-title">{{ item.title }}</span>
+      class="topic-title">{{ item.title }}</router-link>
   </div>
 </template>
 
@@ -49,6 +50,9 @@ export default {
   computed: {
     tab () {
       return this.types[this.item.tab]
+    },
+    to () {
+      return `/topic/${this.item.id}`
     }
   }
 }
@@ -76,6 +80,12 @@ export default {
 
     .topic-title {
       margin-left: 10px;
+      color: #303133;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 </style>
