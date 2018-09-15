@@ -21,7 +21,9 @@
       :hit="true"
       size="small"
       type="success">{{ tab }}</el-tag>
-    <span :title="item.title">{{ item.title }}</span>
+    <span
+      :title="item.title"
+      class="topic-title">{{ item.title }}</span>
   </div>
 </template>
 
@@ -55,11 +57,25 @@ export default {
 <style lang="scss" scoped>
   .item {
     display: flex;
+    border-top: 1px solid #f0f0f0;
+    padding: 10px;
     align-items: center;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
 
     .avatar {
       width: 30px;
       height: 30px;
+    }
+
+    .el-tag {
+      margin-left: 10px;
+    }
+
+    .topic-title {
+      margin-left: 10px;
     }
   }
 </style>
