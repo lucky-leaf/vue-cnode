@@ -8,14 +8,17 @@
     </a>
     <el-tag
       v-if="item.top"
+      :hit="true"
       size="small"
       type="danger">置顶</el-tag>
     <el-tag
       v-if="item.good"
+      :hit="true"
       size="small"
       type="warning">精华</el-tag>
     <el-tag
       v-if="item.tab"
+      :hit="true"
       size="small"
       type="success">{{ tab }}</el-tag>
     <span :title="item.title">{{ item.title }}</span>
