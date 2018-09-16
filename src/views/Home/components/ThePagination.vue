@@ -1,13 +1,28 @@
 <template>
   <el-pagination
-    :total="1000"
+    :page-size="limit"
+    :total="total"
     background
     layout="prev, pager, next"/>
 </template>
 
 <script>
-export default {
+import { mapState } from 'vuex'
 
+export default {
+  name: 'ThePagination',
+  props: {
+    'pageCount': {
+      type: Number,
+      default: 0
+    }
+  },
+  computed: {
+    ...mapState(['limit']),
+    total () {
+      return this.limit * this.pageCount
+    }
+  }
 }
 </script>
 

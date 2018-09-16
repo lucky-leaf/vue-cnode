@@ -8,42 +8,42 @@
       label="全部"
       name="all">
       <list-view />
-      <the-pagination />
+      <the-pagination :page-count="89"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="精华"
       name="good">
       <list-view />
-      <the-pagination />
+      <the-pagination :page-count="17"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="分享"
       name="share">
       <list-view />
-      <the-pagination />
+      <the-pagination :page-count="36"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="问答"
       name="ask">
       <list-view />
-      <the-pagination />
+      <the-pagination :page-count="53"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="招聘"
       name="job">
       <list-view />
-      <the-pagination />
+      <the-pagination :page-count="13"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="测试"
       name="dev">
       <list-view />
-      <the-pagination />
+      <the-pagination :page-count="67"/>
     </el-tab-pane>
   </el-tabs>
 </template>
