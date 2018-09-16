@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import ListItem from './ListItem'
 
 export default {
@@ -16,9 +17,7 @@ export default {
     ListItem
   },
   computed: {
-    tab () {
-      return this.$store.state.tab
-    },
+    ...mapState(['tab']),
     list () {
       return this.$store.state.lists[this.tab]
     }
