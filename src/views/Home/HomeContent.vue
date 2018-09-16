@@ -49,31 +49,18 @@
 </template>
 
 <script>
-import {
-  mapState,
-  mapActions
-} from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import ListView from './components/ListView'
 import ThePagination from './components/ThePagination'
 
 export default {
   name: 'HomeContent',
-  components: {
-    ListView,
-    ThePagination
-  },
+  components: { ListView, ThePagination },
   data () {
-    return {
-      activeName: 'all'
-    }
+    return { activeName: 'all' }
   },
   computed: {
-    ...mapState([
-      'tab',
-      'limit',
-      'page',
-      'mdrender'
-    ])
+    ...mapState(['tab', 'limit', 'page', 'mdrender'])
   },
   created () {
     this.GET_TOPICS({
