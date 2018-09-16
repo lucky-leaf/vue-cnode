@@ -84,9 +84,7 @@ export default {
     })
   },
   methods: {
-    ...mapActions([
-      'GET_TOPICS'
-    ]),
+    ...mapActions(['GET_TOPICS']),
     handleClick (tab, event) {
       this.GET_TOPICS({
         page: 1,
