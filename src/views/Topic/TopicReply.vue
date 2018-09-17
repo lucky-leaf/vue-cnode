@@ -1,5 +1,5 @@
 <template>
-  <div>Topic Reply</div>
+  <div>Reply</div>
 </template>
 
 <script>
