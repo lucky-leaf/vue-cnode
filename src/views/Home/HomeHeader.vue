@@ -12,7 +12,8 @@
 
       <el-button
         type="text"
-        icon="el-icon-menu">首页</el-button>
+        icon="el-icon-menu"
+        @click="$router.push('/')">首页</el-button>
 
       <el-button
         type="text"
