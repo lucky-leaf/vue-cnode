@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/topic/:id',
       component: TopicView,
-      props: true // 将id传给TopicView组件
+      props: true
     }
   ]
 })
