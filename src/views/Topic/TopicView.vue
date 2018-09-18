@@ -1,9 +1,13 @@
 <template>
-  <el-card class="box-card">
-    <topic-header slot="header" />
-    <topic-content />
-    <topic-reply />
-  </el-card>
+  <div>
+    <el-card class="box-card">
+      <topic-header slot="header" />
+      <topic-content />
+    </el-card>
+    <el-card class="box-card replies">
+      <topic-reply />
+    </el-card>
+  </div>
 </template>
 
 <script>
@@ -50,5 +54,9 @@ export default {
 <style lang="scss" scoped>
   .box-card {
     border-radius: 0;
+  }
+
+  .replies {
+    margin-top: 10px;
   }
 </style>
