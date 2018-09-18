@@ -20,5 +20,7 @@ export default {
     font-size: 14px;
     color: #303133;
     background-color: #f8f8f8;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 </style>
