@@ -14,18 +14,23 @@
       v-if="topic.tab"
       :hit="true"
       size="small"
-      type="success">{{ topic.tab }}</el-tag>
+      type="success">{{ tab }}</el-tag>
     <h1 class="title">{{ topic.title }}</h1>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import types from '../../mixins/types'
 
 export default {
   name: 'TopicHeader',
+  mixins: [types],
   computed: {
-    ...mapState(['topic'])
+    ...mapState(['topic']),
+    tab () {
+      return this.types[this.topic.tab]
+    }
   }
 }
 </script>
