@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['topic', 'mdrender', 'accessToken'])
+    ...mapState(['mdrender', 'accessToken'])
   },
   created () {
     this.GET_TOPIC({
