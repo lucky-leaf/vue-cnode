@@ -15,7 +15,6 @@ const getTopics = async function ({ page, tab, limit, mdrender }) {
 
 const getTopicById = async function ({ id, mdrender, accesstoken }) {
   try {
-    mdrender = mdrender || true
     const response = await axios.get(API_PREFIX + `/topic/${id}`, {
       params: { mdrender, accesstoken }
     })
