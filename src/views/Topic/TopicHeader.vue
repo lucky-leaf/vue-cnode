@@ -37,9 +37,18 @@ export default {
 
 <style lang="scss" scoped>
   .topic-header {
+    display: flex;
+    align-items: center;
+
+    .el-tag {
+      & + .el-tag {
+        margin-left: 10px;
+      }
+    }
+
     .title {
       font-size: 22px;
-      margin: 10px 0;
+      margin: 0 0 0 10px;
     }
   }
 </style>
