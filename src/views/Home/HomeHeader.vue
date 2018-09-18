@@ -1,14 +1,14 @@
 <template>
   <header class="nav-header">
     <nav class="nav-content">
-      <a
-        href="#"
+      <router-link
+        to="/"
         class="nav-brand">
         <img
           class="brand"
           src="../../assets/images/cnodejs.svg"
           alt="brand">
-      </a>
+      </router-link>
 
       <el-button
         type="text"
