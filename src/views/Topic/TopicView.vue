@@ -1,8 +1,8 @@
 <template>
   <el-card class="box-card">
-    <topic-header/>
-    <topic-content/>
-    <topic-reply/>
+    <topic-header slot="header" />
+    <topic-content />
+    <topic-reply />
   </el-card>
 </template>
 
