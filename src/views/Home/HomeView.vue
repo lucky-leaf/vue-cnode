@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-view">
     <home-header />
     <router-view class="content" />
   </div>
@@ -18,7 +18,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .home-view {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+  }
+
   .content {
+    flex: 1;
     width: 1024px;
     margin: 20px auto 0;
   }
