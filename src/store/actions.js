@@ -1,5 +1,5 @@
 import {
-  getTopics, getTopicById, checkAccessToken
+  getTopics, getTopicById, checkToken
 } from '../api'
 
 export default {
@@ -18,8 +18,8 @@ export default {
     commit('SET_TOPIC', { data: data.data })
   },
 
-  async checkAccessToken ({ state, commit }, accesstoken) {
-    const response = await checkAccessToken(accesstoken)
+  async CHECK_TOKEN ({ state, commit }, accesstoken) {
+    const response = await checkToken(accesstoken)
     if (response.success) {
       commit('SET_ACCESSTOKEN', { accesstoken })
     } else {
