@@ -56,11 +56,11 @@ import ThePagination from './components/ThePagination'
 export default {
   name: 'HomeContent',
   components: { ListView, ThePagination },
-  data () {
-    return { activeName: 'all' }
-  },
   computed: {
-    ...mapState(['tab', 'limit', 'page', 'mdrender'])
+    ...mapState(['tab', 'limit', 'page', 'mdrender']),
+    activeName () {
+      return this.tab
+    }
   },
   created () {
     this.GET_TOPICS({
