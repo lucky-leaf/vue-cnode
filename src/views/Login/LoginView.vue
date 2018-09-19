@@ -72,6 +72,7 @@ export default {
         margin-top: 15px;
 
         & ~ span {
+          font-size: 12px;
           color: #bbb;
         }
       }
@@ -85,7 +86,7 @@ export default {
         padding: 8px 16px;
         background-color: #ecf8ff;
         border-left: 5px solid #50bfff;
-        margin: 100px 0;
+        margin: 50px 0;
       }
     }
   }
