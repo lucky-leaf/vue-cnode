@@ -22,57 +22,14 @@
       <el-button
         type="text"
         icon="el-icon-setting"
-        @click="dialogVisible = true">登录</el-button>
-
-      <!-- visible如果不用sync修饰符，则需要监听close函数 -->
-      <el-dialog
-        :visible.sync="dialogVisible"
-        title="登录"
-        width="30%">
-        <el-form>
-          <el-form-item
-            label="访问令牌"
-            label-width="formLabelWidth">
-            <el-input v-model="form.token"/>
-          </el-form-item>
-        </el-form>
-        <span slot="footer">
-          <el-button @click="dialogVisible = false">取消</el-button>
-          <el-button
-            type="primary"
-            @click="handleClick">确认</el-button>
-        </span>
-      </el-dialog>
+        @click="$router.push('/login')">登录</el-button>
     </nav>
   </header>
 </template>
 
 <script>
-import {
-  mapState,
-  mapActions
-} from 'vuex'
-
 export default {
-  name: 'HomeHeader',
-  data () {
-    return {
-      dialogVisible: false,
-      form: {
-        token: ''
-      },
-      formLabelWidth: '120px'
-    }
-  },
-  computed: mapState(['accessToken']),
-  methods: {
-    ...mapActions(['checkAccessToken']),
-    handleClick () {
-      if (this.form.token) {
-        this.checkAccessToken(this.form.data)
-      }
-    }
-  }
+  name: 'HomeHeader'
 }
 </script>
 
