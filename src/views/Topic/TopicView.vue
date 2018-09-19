@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapMutations, mapActions } from 'vuex'
 
 import TopicHeader from './TopicHeader'
 import TopicContent from './TopicContent'
@@ -49,7 +49,12 @@ export default {
       next()
     })
   },
+  beforeRouteLeave (to, from, next) {
+    this.SET_TOPIC({ data: {} })
+    next()
+  },
   methods: {
+    ...mapMutations(['SET_TOPIC']),
     ...mapActions(['GET_TOPIC'])
   }
 }
