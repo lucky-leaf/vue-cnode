@@ -8,7 +8,7 @@
         <input
           type="text"
           class="x-input"
-          placeholder="请输入正确的AccessToken，例如：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx">
+          placeholder="请输入正确的AccessToken">
         <el-checkbox
           v-model="checked"
           class="remember">
@@ -46,11 +46,13 @@ export default {
       border-radius: 0;
 
       .label {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
       }
 
       .x-input {
+        margin-top: 15px;
+        font-size: 18px;
         outline: none;
         border: none;
         height: 48px;
@@ -67,7 +69,7 @@ export default {
       }
 
       .remember {
-        margin-top: 10px;
+        margin-top: 15px;
 
         & ~ span {
           color: #bbb;
