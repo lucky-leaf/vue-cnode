@@ -25,6 +25,11 @@
       :to="to"
       :title="item.title"
       class="topic-title">{{ item.title }}</router-link>
+    <a href="#">
+      <img
+        src=""
+        alt="">
+    </a>
   </div>
 </template>
 
@@ -72,7 +77,11 @@ export default {
     }
 
     .topic-title {
-      margin-left: 10px;
+      margin: 0 auto 0 10px;
+      width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       color: inherit;
       text-decoration: none;
 
