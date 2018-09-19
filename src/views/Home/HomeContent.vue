@@ -58,8 +58,9 @@ export default {
   components: { ListView, ThePagination },
   computed: {
     ...mapState(['tab', 'limit', 'page', 'mdrender']),
-    activeName () {
-      return this.tab
+    activeName: {
+      get () { return this.tab },
+      set (newValue) {}
     }
   },
   created () {
