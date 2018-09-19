@@ -1,10 +1,14 @@
 <template>
   <div>
-    <el-card class="box-card">
+    <el-card
+      class="box-card"
+      shadow="never">
       <topic-header slot="header" />
       <topic-content />
     </el-card>
-    <el-card class="box-card replies">
+    <el-card
+      class="box-card replies"
+      shadow="never">
       <topic-reply />
     </el-card>
   </div>
