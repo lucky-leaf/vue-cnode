@@ -25,11 +25,18 @@
       :to="to"
       :title="item.title"
       class="topic-title">{{ item.title }}</router-link>
-    <a href="#">
-      <img
-        src=""
-        alt="">
-    </a>
+    <p class="counter">
+      <span
+        class="reply-count"
+        title="回复数">{{ item.reply_count }}</span>
+      <span class="seperator">/</span>
+      <span
+        class="visit-count"
+        title="点击数">{{ item.visit_count }}</span>
+    </p>
+    <span class="last-reply-time">
+      4小时前
+    </span>
   </div>
 </template>
 
@@ -77,7 +84,7 @@ export default {
     }
 
     .topic-title {
-      margin: 0 auto 0 10px;
+      margin-left: 10px;
       width: 70%;
       white-space: nowrap;
       overflow: hidden;
@@ -88,6 +95,27 @@ export default {
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    .counter {
+      position: relative;
+      left: -70%;
+      top: 20px;
+      .reply-count {
+        color: #409eff;
+      }
+      .seperator {
+        margin: 0 -3px;
+        font-size: 12px;
+      }
+      .visit-count {
+        font-size: 12px;
+        color: #b4b4b4;
+      }
+    }
+
+    .last-reply-time {
+      margin-left: auto;
     }
   }
 </style>

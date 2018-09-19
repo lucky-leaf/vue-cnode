@@ -26,7 +26,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .list {
-    height: 2168px;
-  }
+
 </style>
