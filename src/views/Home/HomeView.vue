@@ -1,7 +1,11 @@
 <template>
   <div class="home-view">
     <home-header />
-    <router-view class="content" />
+    <transition
+      name="el-fade-in-linear"
+      mode="out-in">
+      <router-view class="content" />
+    </transition>
   </div>
 </template>
 
