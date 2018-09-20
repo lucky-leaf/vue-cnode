@@ -35,12 +35,13 @@
         title="点击数">{{ item.visit_count }}</span>
     </p>
     <span class="last-reply-time">
-      4小时前
+      {{ relativeTime }}
     </span>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 import types from '../../../mixins/types'
 
 export default {
@@ -58,6 +59,9 @@ export default {
     },
     to () {
       return `/topic/${this.item.id}`
+    },
+    relativeTime () {
+      return moment(this.item.last_reply_at).fromNow()
     }
   }
 }
@@ -116,6 +120,8 @@ export default {
 
     .last-reply-time {
       margin-left: auto;
+      font-size: 12px;
+      color: #b4b4b4;
     }
   }
 </style>
