@@ -20,7 +20,11 @@
     </div>
     <div class="info">
       <span> 发布于 {{ relativeTime }}</span>
-      <span> 作者 {{ topic.author.loginname }}</span>
+      <span> 作者
+        <router-link
+          :to="toUser"
+          class="user-name">{{ topic.author.loginname }}</router-link>
+      </span>
       <span> {{ topic.visit_count }} 次浏览</span>
       <el-button
         type="success"
@@ -44,6 +48,9 @@ export default {
     },
     relativeTime () {
       return moment(this.topic.create_at).fromNow()
+    },
+    toUser () {
+      return `/user/${this.topic.author.loginname}`
     }
   }
 }
@@ -71,12 +78,20 @@ export default {
       display: flex;
       align-items: center;
       margin-top: 10px;
-      font-size: 12px;
+      font-size: 13px;
       color: #757575;
 
       span {
         &::before {
           content: "•";
+        }
+      }
+
+      .user-name {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
         }
       }
 
