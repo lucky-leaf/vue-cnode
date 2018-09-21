@@ -1,21 +1,19 @@
 <template>
-  <div class="list">
-    <list-item
+  <div class="topic-list">
+    <topic-item
       v-for="item in list"
       :key="item.id"
-      :item="item"/>
+      :item="item" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import ListItem from './ListItem'
+import TopicItem from './TopicItem'
 
 export default {
-  name: 'ListView',
-  components: {
-    ListItem
-  },
+  name: 'TopicList',
+  components: { TopicItem },
   computed: {
     ...mapState(['tab']),
     list () {

@@ -1,5 +1,5 @@
 <template>
-  <div class="item">
+  <div class="topic-item">
     <router-link
       :to="toUser"
       :title="item.author.loginname">
@@ -47,7 +47,7 @@ import moment from 'moment'
 import types from '../../../mixins/types'
 
 export default {
-  name: 'ListItem',
+  name: 'TopicItem',
   mixins: [types],
   props: {
     item: {
@@ -73,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .item {
+  .topic-item {
     display: flex;
     border-bottom: 1px solid #f0f0f0;
     padding: 10px;
