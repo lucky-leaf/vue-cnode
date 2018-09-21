@@ -44,7 +44,7 @@
 
 <script>
 import moment from 'moment'
-import types from '../../../mixins/types'
+import types from '../mixins/types'
 
 export default {
   name: 'TopicItem',

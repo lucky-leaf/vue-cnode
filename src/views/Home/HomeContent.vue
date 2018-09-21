@@ -51,8 +51,8 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import TopicList from './components/TopicList'
-import ThePagination from './components/ThePagination'
+import TopicList from '../../components/TopicList'
+import ThePagination from '../../components/ThePagination'
 
 export default {
   name: 'HomeContent',
