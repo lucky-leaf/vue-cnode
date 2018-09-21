@@ -33,4 +33,13 @@ const checkToken = async (accesstoken) => {
   }
 }
 
-export { getTopics, getTopicById, checkToken }
+const getUser = async (loginname) => {
+  try {
+    const response = await axios.get(`${API_PREFIX}/user/${loginname}`)
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export { getTopics, getTopicById, checkToken, getUser }

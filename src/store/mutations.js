@@ -11,6 +11,9 @@ export default {
   SET_ACCESSTOKEN (state, { accessToken }) {
     state.accessToken = accessToken
   },
+  SET_USER (state, { data }) {
+    state.user = data
+  },
   CHECK_FAILURE (state) {
     console.log('error access token')
   }
