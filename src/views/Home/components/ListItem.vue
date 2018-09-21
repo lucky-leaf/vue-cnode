@@ -75,7 +75,7 @@ export default {
 <style lang="scss" scoped>
   .item {
     display: flex;
-    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
     padding: 10px;
     align-items: center;
 

@@ -1,48 +1,49 @@
 <template>
   <el-tabs
     v-model="activeName"
+    :stretch="true"
     type="border-card"
     @tab-click="handleClick">
 
     <el-tab-pane
       label="全部"
       name="all">
-      <list-view />
+      <list-view class="topic-list" />
       <the-pagination :page-count="89"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="精华"
       name="good">
-      <list-view />
+      <list-view class="topic-list" />
       <the-pagination :page-count="17"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="分享"
       name="share">
-      <list-view />
+      <list-view class="topic-list" />
       <the-pagination :page-count="36"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="问答"
       name="ask">
-      <list-view />
+      <list-view class="topic-list" />
       <the-pagination :page-count="53"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="招聘"
       name="job">
-      <list-view />
+      <list-view class="topic-list" />
       <the-pagination :page-count="13"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="测试"
       name="dev">
-      <list-view />
+      <list-view class="topic-list" />
       <the-pagination :page-count="67"/>
     </el-tab-pane>
   </el-tabs>
@@ -85,6 +86,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  .topic-list {
+    margin: -15px -15px 0 -15px;
+  }
 </style>
