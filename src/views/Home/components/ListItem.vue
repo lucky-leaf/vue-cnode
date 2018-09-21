@@ -1,11 +1,13 @@
 <template>
   <div class="item">
-    <a href="#">
+    <router-link
+      :to="toUser"
+      :title="item.author.loginname">
       <img
         :src="item.author.avatar_url"
         class="avatar"
         alt="avatar">
-    </a>
+    </router-link>
     <el-tag
       v-if="item.top"
       :hit="true"
@@ -22,7 +24,7 @@
       size="small"
       type="success">{{ tab }}</el-tag>
     <router-link
-      :to="to"
+      :to="toTopic"
       :title="item.title"
       class="topic-title">{{ item.title }}</router-link>
     <p class="counter">
@@ -57,8 +59,11 @@ export default {
     tab () {
       return this.types[this.item.tab]
     },
-    to () {
+    toTopic () {
       return `/topic/${this.item.id}`
+    },
+    toUser () {
+      return `/user/${this.item.author.loginname}`
     },
     relativeTime () {
       return moment(this.item.last_reply_at).fromNow()
