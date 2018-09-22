@@ -1,21 +1,23 @@
 <template>
-  <div class="user-info">
+  <div class="topic-replied">
     <el-card
       shadow="never"
       class="box-card">
-      <h1>info</h1>
+      最近回复的话题
     </el-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'UserInfo'
+  name: 'TopicReplied'
 }
 </script>
 
 <style lang="scss" scoped>
-  .user-info {
+  .topic-replied {
+    margin-top: 10px;
+
     .box-card {
       border-radius: 0;
     }

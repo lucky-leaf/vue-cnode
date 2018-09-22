@@ -1,21 +1,23 @@
 <template>
-  <div class="user-info">
+  <div class="topic-created">
     <el-card
       shadow="never"
       class="box-card">
-      <h1>info</h1>
+      最近创建的话题
     </el-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'UserInfo'
+  name: 'TopicCreated'
 }
 </script>
 
 <style lang="scss" scoped>
-  .user-info {
+  .topic-created {
+    margin-top: 10px;
+
     .box-card {
       border-radius: 0;
     }
