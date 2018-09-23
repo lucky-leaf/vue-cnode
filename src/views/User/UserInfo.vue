@@ -3,7 +3,11 @@
     <el-card
       shadow="never"
       class="box-card">
-      <h1>info</h1>
+      <div
+        slot="header"
+        class="title">
+        用户信息
+      </div>
     </el-card>
   </div>
 </template>
@@ -18,6 +22,12 @@ export default {
   .user-info {
     .box-card {
       border-radius: 0;
+
+      .title {
+        margin: -18px -20px;
+        padding: 18px 20px;
+        border-left: 5px solid #50bfff;
+      }
     }
   }
 </style>
