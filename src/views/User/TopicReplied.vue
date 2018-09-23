@@ -8,13 +8,17 @@
         class="title">
         最近回复的话题
       </div>
+      <topic-list />
     </el-card>
   </div>
 </template>
 
 <script>
+import TopicList from './components/TopicList'
+
 export default {
-  name: 'TopicReplied'
+  name: 'TopicReplied',
+  components: { TopicList }
 }
 </script>
 

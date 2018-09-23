@@ -6,13 +6,17 @@
       <div
         slot="header"
         class="title">最近创建的话题</div>
+      <topic-list />
     </el-card>
   </div>
 </template>
 
 <script>
+import TopicList from './components/TopicList'
+
 export default {
-  name: 'TopicCreated'
+  name: 'TopicCreated',
+  components: { TopicList }
 }
 </script>
 
