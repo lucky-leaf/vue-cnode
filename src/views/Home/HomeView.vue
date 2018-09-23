@@ -31,6 +31,6 @@ export default {
   .content {
     flex: 1;
     width: 1024px;
-    margin: 20px auto 0;
+    margin: 20px auto;
   }
 </style>
