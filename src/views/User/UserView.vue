@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
 import UserInfo from './UserInfo'
 import TopicCreated from './TopicCreated'
 import TopicReplied from './TopicReplied'
@@ -24,7 +24,16 @@ export default {
   created () {
     this.GET_USER(this.loginName)
   },
+  beforeRouteUpdate (to, from, next) {
+    this.GET_USER(to.params.loginName)
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    this.SET_USER({ data: {} })
+    next()
+  },
   methods: {
+    ...mapMutations(['SET_USER']),
     ...mapActions(['GET_USER'])
   }
 }
