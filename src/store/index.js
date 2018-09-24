@@ -21,7 +21,8 @@ export default new Vuex.Store({
       ask: [],
       job: [],
       dev: []
-    }
+    },
+    user: {}
   },
   mutations,
   actions
