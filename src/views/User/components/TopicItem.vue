@@ -1,15 +1,63 @@
 <template>
   <div class="topic-item">
-    TopicItem
+    <router-link
+      :to="toUser"
+      :title="item.author.loginname">
+      <img
+        :src="item.author.avatar_url"
+        class="avatar"
+        alt="avatar">
+    </router-link>
+    <router-link
+      :to="toTopic"
+      :title="item.title">
+      {{ item.title }}
+    </router-link>
+    <span class="last-reply-time">
+      {{ relativeTime }}
+    </span>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
-  name: 'TopicItem'
+  name: 'TopicItem',
+  props: {
+    item: {
+      type: Object,
+      default: () => {}
+    }
+  },
+  computed: {
+    toUser () {
+      return `/user/${this.item.author.loginname}`
+    },
+    toTopic () {
+      return `/topic/${this.item.id}`
+    },
+    relativeTime () {
+      return moment(this.item.last_reply_at).fromNow()
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+  .topic-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
 
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+    }
+  }
 </style>
