@@ -27,6 +27,8 @@ export default {
         margin: -18px -20px;
         padding: 18px 20px;
         border-left: 5px solid #50bfff;
+        font-size: 16px;
+        font-weight: 700;
       }
     }
   }
