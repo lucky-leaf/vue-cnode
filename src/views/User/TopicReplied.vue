@@ -8,17 +8,19 @@
         class="title">
         最近回复的话题
       </div>
-      <topic-list />
+      <topic-list :list="user.recent_replies"/>
     </el-card>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import TopicList from './components/TopicList'
 
 export default {
   name: 'TopicReplied',
-  components: { TopicList }
+  components: { TopicList },
+  computed: mapState(['user'])
 }
 </script>
 

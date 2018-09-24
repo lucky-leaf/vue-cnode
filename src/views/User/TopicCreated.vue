@@ -6,17 +6,19 @@
       <div
         slot="header"
         class="title">最近创建的话题</div>
-      <topic-list />
+      <topic-list :list="user.recent_topics"/>
     </el-card>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import TopicList from './components/TopicList'
 
 export default {
   name: 'TopicCreated',
-  components: { TopicList }
+  components: { TopicList },
+  computed: mapState(['user'])
 }
 </script>
 
