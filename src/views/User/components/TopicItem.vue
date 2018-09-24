@@ -10,7 +10,8 @@
     </router-link>
     <router-link
       :to="toTopic"
-      :title="item.title">
+      :title="item.title"
+      class="topic-title">
       {{ item.title }}
     </router-link>
     <span class="last-reply-time">
@@ -58,6 +59,26 @@ export default {
     .avatar {
       width: 30px;
       height: 30px;
+    }
+
+    .topic-title {
+      margin-left: 10px;
+      width: 70%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .last-reply-time {
+      margin-left: auto;
+      font-size: 12px;
+      color: #b4b4b4;
     }
   }
 </style>
