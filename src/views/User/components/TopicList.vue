@@ -1,12 +1,24 @@
 <template>
   <div class="topic-list">
-    TopicList
+    <topic-item
+      v-for="item in list"
+      :key="item.id"
+      :item="item" />
   </div>
 </template>
 
 <script>
+import TopicItem from './TopicItem'
+
 export default {
-  name: 'TopicList'
+  name: 'TopicList',
+  components: { TopicItem },
+  props: {
+    list: {
+      type: Array,
+      default: () => []
+    }
+  }
 }
 </script>
 
