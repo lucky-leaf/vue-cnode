@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .topic-list {
+    margin: -20px;
+  }
 </style>
