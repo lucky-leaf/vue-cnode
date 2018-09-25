@@ -50,7 +50,7 @@ export default {
     })
   },
   beforeRouteLeave (to, from, next) {
-    this.SET_TOPIC({ data: { author: {} } })
+    this.SET_TOPIC({ data: { author: {}, content: '' } })
     next()
   },
   methods: {

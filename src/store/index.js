@@ -12,7 +12,8 @@ export default new Vuex.Store({
     limit: 40,
     mdrender: false,
     topic: {
-      author: {}
+      author: {},
+      content: ''
     },
     lists: {
       all: [],
