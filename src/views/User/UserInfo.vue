@@ -13,11 +13,19 @@
           :src="user.avatar_url"
           class="avatar"
           alt="avatar">
-        <span class="score">{{ user.score }}积分</span>
-        <a
-          :href="githubUrl"
-          target="_blank">@{{ user.githubUsername }}</a>
-        <span class="created-time">注册时间{{ relativeTime }}</span>
+        <div class="profile">
+          <span class="score">积分: {{ user.score }}</span>
+          <label>
+            GITHUB:
+            <a
+              :href="githubUrl"
+              class="github"
+              target="_blank">
+              {{ user.githubUsername }}
+            </a>
+          </label>
+          <span class="created-time">注册时间: {{ relativeTime }}</span>
+        </div>
       </div>
     </el-card>
   </div>
@@ -56,10 +64,34 @@ export default {
       }
 
       .user-profile {
+        display: flex;
+
         .avatar {
           width: 120px;
           height: 120px;
           border-radius: 50%;
+        }
+
+        .profile {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          margin-left: 30px;
+
+          .score {
+            display: block;
+          }
+
+          .github {
+            color: inherit;
+
+            &:hover {
+              color: #409eff;
+            }
+          }
+          .created-time {
+            display: block;
+          }
         }
       }
     }
