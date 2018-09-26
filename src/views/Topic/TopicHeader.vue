@@ -20,7 +20,7 @@
     </div>
     <div class="info">
       <span> 发布于 {{ relativeTime }}</span>
-      <span> 作者
+      <span> 作者：
         <router-link
           :to="toUser"
           class="user-name">{{ topic.author.loginname }}</router-link>
@@ -79,19 +79,17 @@ export default {
       align-items: center;
       margin-top: 10px;
       font-size: 13px;
-      color: #757575;
+      color: #99a2aa;
 
-      span {
-        &::before {
-          content: "•";
-        }
+      &>span {
+        margin-right: 20px;
       }
 
       .user-name {
         color: inherit;
         text-decoration: none;
         &:hover {
-          text-decoration: underline;
+          color: #409eff;
         }
       }
 
