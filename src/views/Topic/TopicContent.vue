@@ -1,6 +1,6 @@
 <template>
   <div
-    class="topic-content"
+    class="markdown-body"
     v-html="contentHtml" />
 </template>
 
@@ -20,7 +20,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .topic-content {
-    margin: -20px;
-  }
+
 </style>

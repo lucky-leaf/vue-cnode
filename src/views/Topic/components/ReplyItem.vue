@@ -15,7 +15,7 @@
         {{ item.author.loginname }}
       </router-link>
       <div
-        class="reply-content"
+        class="markdown-body"
         v-html="replyHtml" />
       <div class="info">
         <span class="floor">#{{ floor }}</span>
@@ -84,6 +84,10 @@ export default {
         &:hover {
           color: #409eff;
         }
+      }
+
+      .markdown-body {
+        margin: 10px 0;
       }
 
       .info {
