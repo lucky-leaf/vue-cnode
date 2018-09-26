@@ -20,8 +20,13 @@ export default {
 
 <style lang="scss" scoped>
   .topic-reply {
+    margin: -20px;
+
     .count {
+      padding: 10px;
       font-size: 18px;
+      line-height: 24px;
+      border-bottom: 1px solid #f0f0f0;
     }
   }
 </style>
