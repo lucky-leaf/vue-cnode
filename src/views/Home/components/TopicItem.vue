@@ -103,7 +103,7 @@ export default {
       text-decoration: none;
 
       &:hover {
-        text-decoration: underline;
+        color: #409eff;
       }
     }
 
