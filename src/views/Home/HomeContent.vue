@@ -9,42 +9,54 @@
       label="全部"
       name="all">
       <topic-list class="topic-list" />
-      <the-pagination :page-count="89"/>
+      <the-pagination
+        v-show="seen"
+        :page-count="89"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="精华"
       name="good">
       <topic-list class="topic-list" />
-      <the-pagination :page-count="17"/>
+      <the-pagination
+        v-show="seen"
+        :page-count="17"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="分享"
       name="share">
       <topic-list class="topic-list" />
-      <the-pagination :page-count="36"/>
+      <the-pagination
+        v-show="seen"
+        :page-count="36"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="问答"
       name="ask">
       <topic-list class="topic-list" />
-      <the-pagination :page-count="53"/>
+      <the-pagination
+        v-show="seen"
+        :page-count="53"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="招聘"
       name="job">
       <topic-list class="topic-list" />
-      <the-pagination :page-count="13"/>
+      <the-pagination
+        v-show="seen"
+        :page-count="13"/>
     </el-tab-pane>
 
     <el-tab-pane
       label="测试"
       name="dev">
       <topic-list class="topic-list" />
-      <the-pagination :page-count="67"/>
+      <the-pagination
+        v-show="seen"
+        :page-count="67"/>
     </el-tab-pane>
   </el-tabs>
 </template>
@@ -57,6 +69,9 @@ import ThePagination from './components/ThePagination'
 export default {
   name: 'HomeContent',
   components: { TopicList, ThePagination },
+  data () {
+    return { seen: false }
+  },
   computed: {
     ...mapState(['tab', 'limit', 'page', 'mdrender']),
     activeName: {
@@ -70,16 +85,21 @@ export default {
       tab: this.tab,
       limit: this.limit,
       mdrender: this.mdrender
+    }).then(() => {
+      this.seen = true
     })
   },
   methods: {
     ...mapActions(['GET_TOPICS']),
     handleClick (tab, event) {
+      this.seen = false
       this.GET_TOPICS({
         page: 1,
         tab: tab.name,
         limit: this.limit,
         mdrender: this.mdrender
+      }).then(() => {
+        this.seen = true
       })
     }
   }
