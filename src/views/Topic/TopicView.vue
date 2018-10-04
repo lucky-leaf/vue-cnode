@@ -11,6 +11,11 @@
       shadow="never">
       <topic-reply />
     </el-card>
+    <el-card
+      class="box-card editor"
+      shadow="never">
+      <reply-editor />
+    </el-card>
   </div>
 </template>
 
@@ -20,10 +25,11 @@ import { mapState, mapMutations, mapActions } from 'vuex'
 import TopicHeader from './TopicHeader'
 import TopicContent from './TopicContent'
 import TopicReply from './TopicReply'
+import ReplyEditor from './components/ReplyEditor'
 
 export default {
   name: 'TopicView',
-  components: { TopicHeader, TopicContent, TopicReply },
+  components: { TopicHeader, TopicContent, TopicReply, ReplyEditor },
   props: {
     id: {
       type: String,
@@ -65,7 +71,8 @@ export default {
     border-radius: 0;
   }
 
-  .replies {
+  .replies,
+  .editor {
     margin-top: 10px;
   }
 </style>
