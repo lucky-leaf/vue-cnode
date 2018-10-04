@@ -6,6 +6,7 @@
       <form>
         <label class="label">访问令牌:</label>
         <input
+          v-model="token"
           type="text"
           class="x-input"
           placeholder="请输入正确的AccessToken">
@@ -17,7 +18,8 @@
         <span>不是自己的电脑上不要勾选此项</span>
         <el-button
           type="primary"
-          class="login">登录</el-button>
+          class="login"
+          @click="login">登录</el-button>
       </form>
       <div class="tip">
         <p>如何获取AccessToken？用户登录https://cnodejs.org后，在设置页面可以看到自己的AccessToken</p>
@@ -27,10 +29,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'LoginView',
   data () {
     return { token: '', checked: false }
+  },
+  methods: {
+    ...mapActions(['CHECK_TOKEN']),
+    login () {
+      this.CHECK_TOKEN(this.token)
+    }
   }
 }
 </script>
