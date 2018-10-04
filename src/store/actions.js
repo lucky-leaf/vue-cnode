@@ -18,10 +18,10 @@ export default {
     commit('SET_TOPIC', { data: data.data })
   },
 
-  async CHECK_TOKEN ({ state, commit }, accesstoken) {
-    const response = await checkToken(accesstoken)
-    if (response.success) {
-      commit('SET_ACCESSTOKEN', { accesstoken })
+  async CHECK_TOKEN ({ state, commit }, accessToken) {
+    const { data } = await checkToken(accessToken)
+    if (data.success) {
+      commit('SET_ACCESSTOKEN', { accessToken })
     } else {
       commit('CHECK_FAILURE')
     }
