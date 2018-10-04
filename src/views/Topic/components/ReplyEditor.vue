@@ -3,6 +3,7 @@
     <div class="title">
       添加回复
     </div>
+    <textarea class="editor" />
   </div>
 </template>
 
@@ -21,6 +22,10 @@ export default {
       font-size: 18px;
       line-height: 24px;
       border-bottom: 1px solid #f0f0f0;
+    }
+
+    .editor {
+      outline: none;
     }
   }
 </style>
