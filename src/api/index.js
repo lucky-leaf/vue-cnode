@@ -42,4 +42,15 @@ const getUser = async (loginname) => {
   }
 }
 
-export { getTopics, getTopicById, checkToken, getUser }
+const createTopic = async ({ accesstoken, title, tab, content }) => {
+  try {
+    const response = await axios.post(`${API_PREFIX}/topics`, {
+      accesstoken, title, tab, content
+    })
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export { getTopics, getTopicById, checkToken, getUser, createTopic }
