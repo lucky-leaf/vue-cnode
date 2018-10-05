@@ -15,6 +15,6 @@ export default {
     state.user = data
   },
   CHECK_FAILURE (state) {
-    console.log('error access token')
+    console.log('please input correct token')
   }
 }
